@@ -1,7 +1,7 @@
 package StudentManagementSystem.src;
 
 public class StudentDetails {
-    private int id;
+    private final int id;
     private String name;
     private int age;
     private String course; 
@@ -42,10 +42,6 @@ public class StudentDetails {
 
     public double getMarks(){
         return marks;
-    }
-
-    public void setId(int id){
-        this.id = id;
     }
 
     public void setName(String name){
