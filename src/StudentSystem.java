@@ -52,7 +52,7 @@ public class StudentSystem {
         
         System.out.println("Enter Course : ");
         String course = sc.nextLine();
-         if(course.trim().isEmpty()){
+        if(course.trim().isEmpty()){
             System.out.println("Course cannot be null!");
             return;
         }
@@ -72,7 +72,7 @@ public class StudentSystem {
 
         StudentDetails student = new StudentDetails(id, name, age, course, marks);
         students.add(student);
-        System.out.println("Studnet Added Successfully!");
+        System.out.println("Student Added Successfully!");
     }
 
     public void deleteStudent(){
@@ -117,7 +117,6 @@ public class StudentSystem {
             System.out.println("Name cannot be null!");
             return;
         }
-        student.setName(name);
 
         System.out.println("Enter new Age : ");
         int age; 
@@ -131,15 +130,13 @@ public class StudentSystem {
             System.out.println("Age must be positive!");
             return;
         }
-        student.setAge(age);
 
         System.out.println("Enter new Course : ");
         String course = sc.nextLine();
-         if(course.trim().isEmpty()){
+        if(course.trim().isEmpty()){
             System.out.println("Course cannot be null!");
             return;
         }
-        student.setCourse(course);
 
         System.out.println("Enter new Marks: ");
         double marks;
@@ -153,6 +150,10 @@ public class StudentSystem {
             System.out.println("Marks must be between 0 and 100!");
             return;
         }
+
+        student.setAge(age);
+        student.setName(name);
+        student.setCourse(course);
         student.setMarks(marks);
 
         System.out.println("Student Details Updated Successfully!");
